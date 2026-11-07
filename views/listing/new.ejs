@@ -1,0 +1,109 @@
+
+<% layout("/layouts/boilerplate") %>
+
+
+   
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Create a New Listing</h3>
+            <br><br>
+    <form method="POST" action="/listings" novalidate class="needs-validation">
+        <div class="mb-3">
+        <lable for="title" class="form-label">Title</lable>
+        <input id="title" class="form-control" name="listing[title]" placeholder="Add a Catchy title" required>
+        <div class="valid-feedback">Title looks Good!</div>
+        </div>
+       
+        
+        <div class="mb-3">
+        <lable for="description" class="form-label">Description</lable>
+        <textarea id="description" name="listing[description]" class="form-control" required></textarea>
+        <div class="invalid-feedback">Please enter a valid Description</div>
+        </div>
+       
+        
+        <div class="mb-3">
+        <label for="image" class="form-label">Image Link</label>
+       <input id="image" name="listing[image]" placeholder="enter image url" class="form-control">
+       </div>
+       
+       <div class="mb-3">
+       <label for="price" class="form-label">Price</label>
+        <input id="price" name="listing[price]" placeholder="enter price" type="text" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid Price</div>
+        </div>
+     
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input id="location" name="listing[location]" placeholder="enter location" type="text" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid Location</div>   
+    </div>
+      
+        <div class="mb-3">
+         <label for="country" class="form-label" >Country</label>
+        <input id="country" name="listing[country]" placeholder="enter country name" type="text" class="form-control"required>
+         <div class="invalid-feedback">Please enter a valid Country</div>
+    </div>
+     
+        <button class="btn btn-dark add-btn">Add</button>
+        <br><br>
+    </form>
+    </div>
+    </div>
+
+<!-- ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head>
+<body>
+    <h3>Create a New Listing</h3>
+
+    <form method="POST" action="/listings">
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" name="listing[title]"
+                   placeholder="Enter title" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="listing[description]"
+                      placeholder="Enter description"
+                      class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Link</label>
+            <input type="text" id="image" name="listing[image]"
+                   placeholder="Enter image URL" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" id="price" name="listing[price]"
+                   placeholder="Enter price" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" id="location" name="listing[location]"
+                   placeholder="Enter location" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" id="country" name="listing[country]"
+                   placeholder="Enter country name" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</body>
+</html>
+``` -->
